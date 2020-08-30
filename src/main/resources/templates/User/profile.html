@@ -1,0 +1,36 @@
+
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<main>
+    <div class="container body-container">
+        <div class="row">
+            <div id="main" class="col-sm-9">
+                <div>
+                    <span th:text="${user.email}"></span>
+                    <br/>
+                    <span th:text="${user.fullName}"></span>
+                    <br/>
+                    <footer>
+
+                        <div class="pull-right">
+
+                            <a class="btn btn-success btn-xs" th:href="@{/edit/{id}(id = ${user.id})}">Edit</a>
+                            <a class="btn btn-danger btn-xs" th:href="@{/delete/{id}(id = ${user.id})}">Delete</a>
+
+                            <a class="btn btn-default btn-xs" href="javascript:history.back()">back &raquo;</a>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+</body>
+</html>
